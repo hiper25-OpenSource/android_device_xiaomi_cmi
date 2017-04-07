@@ -38,6 +38,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
+    TargetWifiOverlay \
     xiaomi_cmi_hwlevel_default_overlay \
     xiaomi_cmi_hwlevel_p01_overlay \
     xiaomi_cmi_hwlevel_p1_overlay
