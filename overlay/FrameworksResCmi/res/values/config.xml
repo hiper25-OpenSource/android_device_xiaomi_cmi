@@ -54,6 +54,9 @@
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">90</integer>
 
+    <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">90</integer>
+
     <!-- Minimum screen brightness setting allowed by power manager.
          The user is forbidden from setting the brightness below this level.  -->
     <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0017098193</item>
