@@ -100,6 +100,10 @@ on boot
 
     chmod 0666 /dev/input/event2
 
+    # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 on property:sys.boot_completed=1
     # configure input boost settings
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1344000"
