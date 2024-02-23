@@ -1,5 +1,5 @@
 # Label f0_value sysfs
-genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/f0_value                  u:object_r:sysfs_f0_value:s0
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-3/3-005a/f0_value                  u:object_r:sysfs_f0_value:s0
 
 # Fingerprint sysfs
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare                u:object_r:vendor_sysfs_fingerprint:s0
@@ -25,9 +25,6 @@ genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-3/3-0049                    
 
 # USB
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/typec            u:object_r:sysfs_usb:s0
-
-# Wireless Charging Supply
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless u:object_r:vendor_sysfs_battery_supply:s0
 
 # Wakeup source stats
 genfscon sysfs /devices/0306_02.01.00/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
