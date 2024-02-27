@@ -5,15 +5,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Wifi driver supports IEEE80211AX for softap -->
-    <bool name="config_wifiSoftapIeee80211axSupported" translatable="false">true</bool>
-
-    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
-    <bool name="config_wifiSoftapHeSuBeamformerSupported" translatable="false">true</bool>
-
-    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
-    <bool name="config_wifiSoftapHeSuBeamformeeSupported" translatable="false">true</bool>
-
     <!-- Enable concurrent restricted connectivity + internet connectivity
          Note: this is conditional on the device supporting dual concurrent STAs. -->
     <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled" translatable="false">false</bool>
