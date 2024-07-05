@@ -1274,11 +1274,6 @@ vendor/etc/thermal-8k.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf
 vendor/etc/thermal-class0.conf
-vendor/etc/thermal-india-camera.conf
-vendor/etc/thermal-india-normal.conf
-vendor/etc/thermal-india-per-camera.conf
-vendor/etc/thermal-india-per-normal.conf
-vendor/etc/thermal-map-india.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermal-navigation.conf
 vendor/etc/thermal-nolimits.conf
@@ -1288,7 +1283,6 @@ vendor/etc/thermal-per-class0.conf
 vendor/etc/thermal-per-navigation.conf
 vendor/etc/thermal-per-normal.conf
 vendor/etc/thermal-phone.conf
-vendor/etc/thermal-region-map.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermald-devices.conf
 
