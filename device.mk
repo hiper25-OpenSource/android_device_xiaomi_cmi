@@ -40,10 +40,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCmi \
     SettingsResCmi \
     SystemUIResCmi \
-    TargetWifiOverlay \
-    xiaomi_cmi_hwlevel_default_overlay \
-    xiaomi_cmi_hwlevel_p01_overlay \
-    xiaomi_cmi_hwlevel_p1_overlay
+    TargetWifiOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
