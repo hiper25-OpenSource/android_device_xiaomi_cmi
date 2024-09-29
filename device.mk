@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler \
     sensors.udfps
 
@@ -235,11 +235,6 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_PACKAGES += \
-    xiaomi_cmi_hwlevel_default_overlay \
-    xiaomi_cmi_hwlevel_p01_overlay \
-    xiaomi_cmi_hwlevel_p1_overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig

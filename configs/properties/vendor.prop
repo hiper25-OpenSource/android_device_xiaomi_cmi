@@ -205,6 +205,8 @@ vendor.display.use_smooth_motion=0
 drm.service.enabled=true
 
 # Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.udfps.control_illumination=true
 persist.vendor.qfp=false
 
 # FRP
