@@ -106,13 +106,11 @@ PRODUCT_PACKAGES += \
     disable_configstore
 
 # Consumer IR
-ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.xiaomi
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-endif
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -139,14 +137,12 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Fingerprint
-ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
     libudfpshandler
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-endif
 
 # Health
 PRODUCT_PACKAGES += \
@@ -314,9 +310,7 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vibrator
-ifneq ($(TARGET_IS_TABLET),true)
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
-endif
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
