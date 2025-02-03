@@ -23,3 +23,11 @@ cc_library_static {
     include_dirs: ["system/core/init"],
     recovery_available: true,
 }
+
+cc_library_static {
+    name: "init_xiaomi_cmi",
+    srcs: ["init_xiaomi_cmi.cpp"],
+    whole_static_libs: ["libinit_xiaomi_kona"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}

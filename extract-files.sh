@@ -7,6 +7,9 @@
 
 set -e
 
+DEVICE=cmi
+VENDOR=xiaomi
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
@@ -29,23 +32,11 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
-ONLY_COMMON=
-ONLY_FIRMWARE=
-ONLY_TARGET=
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        --only-common)
-            ONLY_COMMON=true
-            ;;
-        --only-firmware)
-            ONLY_FIRMWARE=true
-            ;;
-        --only-target)
-            ONLY_TARGET=true
-            ;;
         -n | --no-cleanup)
             CLEAN_VENDOR=false
             ;;
@@ -83,6 +74,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V4-cpp.so" "${2}"
             ;;
+        vendor/etc/init/init.batterysecret.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "/seclabel u:r:batterysecret:s0/d" "${2}"
+            ;;
         vendor/etc/init/init.mi_thermald.rc)
             [ "$2" = "" ] && return 0
             sed -i "/seclabel u:r:mi_thermald:s0/d" "${2}"
@@ -90,6 +85,14 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/atfwd@2.0.policy)
             [ "$2" = "" ] && return 0
             grep -q 'gettid: ' "${2}" || echo 'gettid: 1' >> "${2}"
+            ;;
+        vendor/lib/hw/audio.primary.cmi.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s|/vendor/lib/liba2dpoffload\.so|liba2dpoffload_cmi\.so\x00\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
+            ;;
+        vendor/lib64/camera/components/com.mi.node.watermark.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib64/mediadrm/libwvdrmengine.so)
             [ "$2" = "" ] && return 0
@@ -103,6 +106,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
+        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            [ "$2" = "" ] && return 0
+            "${SIGSCAN}" -p "9A 0A 00 94" -P "1F 20 03 D5" -f "${2}"
+            ;;
         *)
             return 1
             ;;
@@ -115,25 +122,9 @@ function blob_fixup_dry() {
     blob_fixup "$1" ""
 }
 
-if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
-    # Initialize the helper for common device
-    setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-fi
-
-if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
-    if [ -z "${ONLY_FIRMWARE}" ]; then
-        extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-    fi
-
-    if [ -z "${SECTION}" ] && [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
-        extract_firmware "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" "${SRC}"
-    fi
-fi
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
