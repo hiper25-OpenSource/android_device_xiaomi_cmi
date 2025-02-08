@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -166,13 +166,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    AOSPAUmiFrameworks \
-    AOSPAUmiSettings \
-    AOSPAUmiSystemUI \
+    AOSPACmiFrameworks \
+    AOSPACmiSettings \
+    AOSPACmiSystemUI \
     FrameworksResTarget \
-    FrameworksResUmi \
-    SettingsResUmi \
-    SystemUIResUmi \
+    FrameworksResCmi \
+    SettingsResCmi \
+    SystemUIResCmi \
     WifiResTarget
 
 # Partitions
