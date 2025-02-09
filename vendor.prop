@@ -26,7 +26,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 ro.vendor.display.sensortype=2
 
 # DPM
-persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
@@ -74,7 +73,6 @@ persist.vendor.qcomsysd.enabled=1
 
 # RIL
 persist.vendor.radio.atfwd.start=true
-persist.vendor.radio.cdma_cap=false
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.dynamic_sar=1

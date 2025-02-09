@@ -113,6 +113,7 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
+vendor/lib/libaudiocloudctrl.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libqtigef.so
@@ -125,6 +126,7 @@ vendor/lib64/liba2dpoffload.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/libqtigef.so
@@ -135,14 +137,23 @@ vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 # Audio Configs
 vendor/etc/audio_configs.xml
 vendor/etc/audio_configs_stock.xml
+vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_effects.conf
 vendor/etc/audio_effects.xml
 vendor/etc/audio_io_policy.conf
+vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_intcodec.xml
+vendor/etc/audio_platform_info_qrd.xml
+vendor/etc/audio_policy_engine_configuration.xml
+vendor/etc/audio_policy_engine_default_stream_volumes.xml
+vendor/etc/audio_policy_engine_product_strategies_mi.xml:vendor/etc/audio_policy_engine_product_strategies.xml
+vendor/etc/audio_policy_engine_stream_volumes_mi.xml:vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_tuning_mixer.txt
 vendor/etc/cirrus.cfg
+vendor/etc/cs35l41_cal.wav
 vendor/etc/mixer_paths.xml
+vendor/etc/mixer_paths_cdp.xml
 vendor/etc/mixer_paths_overlay_dynamic.xml
 vendor/etc/mixer_paths_overlay_static.xml
 
@@ -820,10 +831,19 @@ vendor/lib64/libnpu.so
 
 # Mlipay
 vendor/bin/mlipayd@1.1
+vendor/bin/mtd@1.3
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.2.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.3.so
 
 # NFC
 vendor/etc/libnfc-nxp_RF.conf
@@ -1175,6 +1195,7 @@ vendor/etc/sensors/config/sns_pedometer.json
 vendor/etc/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_sar_algo.json
+vendor/etc/sensors/config/sns_screen_down.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
