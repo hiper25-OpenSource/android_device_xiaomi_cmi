@@ -1,9 +1,9 @@
 Copyright (C) 2022 - The LineageOS Project
 
-Device configuration for Xiaomi Mi 10
+Device configuration for Xiaomi Mi 10 Pro
 =========================================
 
-The Xiaomi Mi 10 (codenamed _"umi"_) is a flagship smartphone from Xiaomi.
+The Xiaomi Mi 10 Pro (codenamed _"cmi"_) is a flagship smartphone from Xiaomi.
 
 It was announced on February 2020. Release date was February 2020.
 
@@ -16,10 +16,9 @@ It was announced on February 2020. Release date was February 2020.
 | GPU                     | Adreno 650                                                                     |
 | Memory                  | 8 / 12 GB RAM                                                                  |
 | Shipped Android Version | 10.0 with MIUI 11                                                              |
-| Storage                 | 128 / 256 GB                                                                   |
-| Battery                 | Non-removable Li-Po 4780 mAh                                                   |
+| Storage                 | 256 / 512 GB                                                                   |
+| Battery                 | Non-removable Li-Po 4500 mAh                                                   |
 | Display                 | 2340 x 1080 pixels, 6.67 inches, 90Hz refresh rate, AMOLED HDR10+              |
-| Rear Camera             | 108MP(Primary sensor) 13MP(Ultra wide-angle) 2MP(Depth sensor) 2MP(Macro lens) |
-| Front Camera            | 20MP                                                                           |
+| Rear Camera             | 108MP(Primary) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Telephoto 5x Hybrid zoom) |
 
-![Xiaomi MI 10](https://i01.appmifile.com/webfile/globalimg/products/pc/mi10/specs1.png)
+![Xiaomi MI 10 Pro](https://i01.appmifile.com/webfile/globalimg/products/pc/mi-10-pro/specs1.png)
