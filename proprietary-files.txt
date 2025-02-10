@@ -214,7 +214,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
 vendor/lib64/camera/com.qti.actuator.cmi_sunny_ultra_dw9800.so
-vendor/lib64/camera/com.qti.actuator.cmi_sunny_ultra_dw9800.so
 vendor/lib64/camera/com.qti.eeprom.cmi_ofilm_s5k3t2_gt24p64.so
 vendor/lib64/camera/com.qti.eeprom.cmi_semco_ov08a10_m24c64.so
 vendor/lib64/camera/com.qti.eeprom.cmi_semco_ov08a10_m24c64x.so
