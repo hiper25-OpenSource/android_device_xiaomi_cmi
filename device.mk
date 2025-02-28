@@ -196,10 +196,6 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
-
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
