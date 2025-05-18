@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2023 The LineageOS Project
+     Copyright (C) 2023 Paranoid Android
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.overlay.umi">
+    package="co.aospa.settings.cmi">
 
     <overlay
         android:isStatic="true"

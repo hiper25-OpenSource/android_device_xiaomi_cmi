@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/umi
+DEVICE_PATH := device/xiaomi/cmi
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -37,7 +37,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := umi
+TARGET_OTA_ASSERT_DEVICE := cmi
 
 # Audio
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
@@ -96,7 +96,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 
-KERNEL_DEFCONFIG := umi_defconfig
+KERNEL_DEFCONFIG := cmi_defconfig
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -165,4 +165,4 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/umi/BoardConfigVendor.mk
+include vendor/xiaomi/cmi/BoardConfigVendor.mk
