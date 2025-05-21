@@ -189,6 +189,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    dsprpcd \
     gps \
     init \
     media \
