@@ -72,9 +72,6 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
-# Qualcomm System Daemon
-persist.vendor.qcomsysd.enabled=1
-
 # RIL
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.data_con_rprt=1
