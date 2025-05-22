@@ -752,27 +752,18 @@ vendor/etc/sec_config
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libmdmdetect.so
 vendor/lib/libpdmapper.so
-vendor/lib/libqcci_legacy.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
-vendor/lib/libqrtr.so
-vendor/lib/libqsocket.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
-vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
@@ -782,7 +773,6 @@ vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
-vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqsocket.so
@@ -845,8 +835,6 @@ vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/netmgrd
 vendor/bin/port-bridge
-vendor/bin/qrtr-cfg
-vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/bin/qti
 vendor/bin/rmt_storage
@@ -1136,19 +1124,13 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
 vendor/lib/libOmxVpp.so
-vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
-vendor/lib/libvppimmotion.so
 vendor/lib/libvpplibrary.so
-vendor/lib/libvpptestutils.so
 vendor/lib64/libOmxVpp.so
-vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
-vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
-vendor/lib64/libvpptestutils.so
 
 # Vibrator Firmware
 vendor/firmware/aw8697_haptic.bin
